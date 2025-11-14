@@ -2,17 +2,19 @@
 
 
 public class SleepAnalyzer {
-    private int deviation; 
+    private double averageSleep; 
 
-    public SleepAnalyzer(int deviation) {
-        this.deviation = deviation;
+    public SleepAnalyzer() {
+       
     }
 
 
-    public double calcAvSleep(double bedTime, double wakeUpTime) {
-        //to be implemented
-        return 0;
+    public void calcAvSleep(double bedTime, double wakeUpTime) {
+        averageSleep = (24 - bedTime) + wakeUpTime;
+        
     }
 
-    public int getDeviation() { return deviation; }
-}
+    public double getAverageSleep() {
+        return averageSleep;
+    }
+}  
