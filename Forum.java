@@ -8,11 +8,13 @@ public class Forum {
     private final List<String> post = new ArrayList<>();
 
     public void addPost(String text) {
-        //To be implemented
+        post.add(text);
     }
 
-    public List<String> getPosts() {
-        //To be implemented
-        return post;
+    public void getPosts() {
+        
+        for (String p : post) {
+            System.out.println(p);
+        }
     }
 }

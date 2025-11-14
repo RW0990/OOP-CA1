@@ -12,7 +12,9 @@ public class MoodTracker {
     public double getMood() {
         return moodRating;
     }
-    
+    public String getNotes() {
+        return notes;
+    }
     //method to compare sleep with mood
     public String moodSleepCorrelation(double avSleep) {
         if (avSleep < 5) { //if less than 5 hours
