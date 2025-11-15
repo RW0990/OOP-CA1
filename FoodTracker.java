@@ -1,32 +1,40 @@
-package OOP_CA1_main;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FoodTracker {
-    private List<String> meal = new ArrayList<>();
-    private double calories;
+    private List<String> mealList = new ArrayList<>();
+    private List <Double> caloriesList = new ArrayList<>();
+    private double totalCal;
     
     
-    public void setMeal(List<String> meal, double calories) {
-        this.meal = meal;
-        this.calories = calories;
-    }
-    
-    public void calcCalories(double calories){
-        if (calories > 0){
-            calories+=calories;
-            System.out.println("The total calories so far is: "+ calories);
-        } else {
-            System.out.println("Please enter amount of calories");
+    public void setMeal(String meals, double calories) {
+        if(calories <=0){
+            System.out.println("Please insert a valid amout ");
         }
+        else {
+            caloriesList.add(calories);
+            mealList.add(meals);
+
+        }
+
     }
     
-    public double getCalories(){
-        return calories;
+    public double calcTotalCalories(){
+       totalCal = 0;
+       for( double cal:caloriesList){
+        totalCal +=cal;
+       }
+       return totalCal;
+
     }
     
-    public List<String> getMeals(){
-        return new ArrayList(meal);
+  
+    
+    public void  getMealsList(){
+        for (String meal : mealList){
+            System.out.println(meal);
+        }
     }
 }

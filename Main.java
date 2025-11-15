@@ -1,4 +1,6 @@
 import java.util.Scanner;
+
+
 public class Main {
     public static void main(String[] args) {
         
@@ -12,6 +14,7 @@ public class Main {
         Dashboard dashboard = new Dashboard(user1, sleepAnalyzer, sleepInput,moodTracker, hydrationTrack);
         HydrationTracker hydrationTracker = new HydrationTracker();
         Forum forum = new Forum();
+        FoodTracker foodTracker = new FoodTracker();
 
 
 
@@ -35,6 +38,17 @@ public class Main {
 
         //Display forum posts 
         forum.getPosts();
+
+        //TEST CALORIES
+
+        foodTracker.setMeal("potato", 2500);
+        foodTracker.setMeal("meat", 1222);
+
+        System.out.println(foodTracker.calcTotalCalories() + " total calories");
+
+        foodTracker.getMealsList();
+
+        
 
     
       
