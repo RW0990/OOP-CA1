@@ -34,7 +34,10 @@ public class HydrationTracker {
             System.out.println("You need to drink " + waterRemaining + "ml to reach your goal");
         }
     }
-
+    
+    public int getWater(){
+        return dailyWaterIntake;
+    }
 
 
 }
