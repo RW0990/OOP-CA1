@@ -1,3 +1,5 @@
+package com.mycompany;
+
 public class SleepFeedback extends SleepAnalyzer {
     private String feedback;
 
