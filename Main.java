@@ -13,8 +13,8 @@ public class Main {
 
 
         //User sleep input
-        sleepInput.setBedTime(22.5);
-        sleepInput.setWakeUpTime(2.0); 
+        sleepInput.setBedTime(23.5);
+        sleepInput.setWakeUpTime(5.5); 
 
         
         //User mood input

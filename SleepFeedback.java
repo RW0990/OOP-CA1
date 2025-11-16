@@ -1,19 +1,20 @@
 package com.mycompany;
 
 public class SleepFeedback extends SleepAnalyzer {
-    private String feedback;
 
-    public SleepFeedback(){
-        double avg=averageSleep();
-    
+    private final String feedback;
 
-    if(avg > 7){
-        feedback="Your average sleep duration is good";
-    }else{
-        feedback="Your average sleep duration is poor, try going to bed at a reasonable time";
+    public SleepFeedback(SleepAnalyzer analyzer) {
+        double avg = analyzer.getAverageSleep();
+
+        if (avg > 7) {
+            feedback = "Your average sleep duration is good";
+        } else {
+            feedback = "Your average sleep duration is poor, try going to bed at a reasonable time";
+        }
     }
-    }
-    public String getFeedback(){
+
+    public String getFeedback() {
         return feedback;
     }
 }

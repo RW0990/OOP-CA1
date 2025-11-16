@@ -7,6 +7,9 @@ public class MoodTracker {
     private String notes; //user entered notes on why they may feel that way
 
     public void setMood(double rating, String notes) {
+        if (rating < 1 || rating > 10) {
+            throw new IllegalArgumentException("Mood rating must be between 1 and 10");
+        }
         this.moodRating = rating;
         this.notes = notes;
     }
