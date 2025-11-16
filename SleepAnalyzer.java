@@ -1,3 +1,5 @@
+package com.mycompany;
+
 // file: com/example/sleeptracker/SleepAnalyzer.java
 
 

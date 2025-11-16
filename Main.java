@@ -1,21 +1,15 @@
-import java.util.Scanner;
-
-
+package com.mycompany;
 public class Main {
     public static void main(String[] args) {
-        
-        HydrationTracker hydrationTrack = new HydrationTracker();
 
-        
         SimpleUser user1 = new SimpleUser("Alice", 28, 65.0);
         SleepInput sleepInput = new SleepInput();
         MoodTracker moodTracker = new MoodTracker();
         SleepAnalyzer sleepAnalyzer = new SleepAnalyzer();
-        Dashboard dashboard = new Dashboard(user1, sleepAnalyzer, sleepInput,moodTracker, hydrationTrack);
         HydrationTracker hydrationTracker = new HydrationTracker();
         Forum forum = new Forum();
         FoodTracker foodTracker = new FoodTracker();
-
+        Dashboard dashboard = new Dashboard(user1, sleepAnalyzer, sleepInput,moodTracker, hydrationTracker);
 
 
         //User sleep input
@@ -25,7 +19,7 @@ public class Main {
         
         //User mood input
         moodTracker.setMood(7.5, "Felt okay, a bit tired in the morning.");
-        System.out.println(moodTracker.getMood());
+        System.out.println(moodTracker.getMoodRating());
         
 
         //User hydration input
@@ -47,11 +41,6 @@ public class Main {
         System.out.println(foodTracker.calcTotalCalories() + " total calories");
 
         foodTracker.getMealsList();
-
-        
-
-    
-      
 
         dashboard.displayDashboard();
 

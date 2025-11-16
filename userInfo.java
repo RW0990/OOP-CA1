@@ -1,3 +1,5 @@
+package com.mycompany;
+
 public abstract class userInfo {
     protected String userName;
     protected int age;

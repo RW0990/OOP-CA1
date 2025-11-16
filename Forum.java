@@ -1,3 +1,5 @@
+package com.mycompany;
+
 
 
 import java.util.ArrayList;
