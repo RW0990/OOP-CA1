@@ -1,6 +1,15 @@
-package com.mycompany;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package week9.sleepapp;
 
-// file: com/example/sleeptracker/SleepAnalyzer.java
+import java.util.ArrayList;
+import java.util.Iterator;
+/**
+ *
+ * @author ryanwhite
+ */
 public class SleepAnalyzer {
 
     private double averageSleep;
@@ -9,15 +18,29 @@ public class SleepAnalyzer {
 
     }
 
-    public void calcAvSleep(double bedTime, double wakeUpTime) {
-        if (wakeUpTime < bedTime) { //if bed time is bigger than wake up time (before 12am)
-            averageSleep = (24 - bedTime) + wakeUpTime;  //calculate hours before mignight slept then add wake time
-        } else {
-            averageSleep = wakeUpTime - bedTime; //if after 12am 
+    public void calcAvSleep(ArrayList<SleepInput> weeklySleep) {
+        double total = 0;
+        
+        for(SleepInput s:weeklySleep){
+            double bedTime = s.getBedTime();
+            double wakeUpTime = s.getWakeUpTime();
+            double hours;
+            
+            if(wakeUpTime < bedTime){
+                hours=(24 - bedTime)+wakeUpTime;
+            }else{
+                hours=wakeUpTime - bedTime;
+            }
+            total += hours;
+        }
+        if(!weeklySleep.isEmpty()){
+            averageSleep = total/weeklySleep.size();
+        }else{
+            averageSleep=0;
         }
     }
-
-    public double getAverageSleep() {
+    public double getAverageSleep(){
         return averageSleep;
     }
-}
+        
+    }
