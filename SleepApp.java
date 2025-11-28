@@ -19,18 +19,23 @@ public class SleepApp {
         String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
         System.out.println("Hi there welcome to your average sleep calculator!");
         System.out.println("The average person sleeps between 49 and 63 hours per week");
-        System.out.println("Please enter your bed times in 24 hour format");
-        System.out.println("For example: -> 20.5 = 8:30pm, 24 -> 12 o'clock");
+
         for (String day : days) {
+            int hours;
+            while (true) {
+                System.out.println("Please enter the amount of hours you slept on " + day + ":");
+                if (input.hasNextInt()) {
+                    hours = input.nextInt();
+                    break;
+                } else {
+                    System.out.println("Please enter a valid number eg.1,2,3,...");
+                    input.nextInt();
+                }
+            }
 
-            System.out.println("Enter the time you went to bed on " + day);
-            double bedTime = input.nextDouble();
-
-            System.out.println("Enter the time you woke up the next morning (in 24 hour format -> 20.5 = 8:30pm)");
-            double wakeUpTime = input.nextDouble();
-
-            SleepInput sleep = new SleepInput(bedTime, wakeUpTime);
+            SleepInput sleep = new SleepInput(hours);
             weeklySleep.add(sleep);
+
         }
 
         for (int i = 0; i < weeklySleep.size(); i++) {

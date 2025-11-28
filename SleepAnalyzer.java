@@ -20,27 +20,17 @@ public class SleepAnalyzer {
 
     public void calcAvSleep(ArrayList<SleepInput> weeklySleep) {
         double total = 0;
-        
-        for(SleepInput s:weeklySleep){
-            double bedTime = s.getBedTime();
-            double wakeUpTime = s.getWakeUpTime();
-            double hours;
-            
-            if(wakeUpTime < bedTime){
-                hours=(24 - bedTime)+wakeUpTime;
-            }else{
-                hours=wakeUpTime - bedTime;
-            }
-            total += hours;
-        }
-        if(!weeklySleep.isEmpty()){
-            averageSleep = total/weeklySleep.size();
-        }else{
-            averageSleep=0;
+
+        for (SleepInput s : weeklySleep) {
+           total += s.getHours();
+           averageSleep = total/7;
         }
     }
-    public double getAverageSleep(){
+       
+    
+
+    public double getAverageSleep() {
         return averageSleep;
     }
-        
-    }
+
+}

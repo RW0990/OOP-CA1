@@ -8,31 +8,16 @@ package week9.sleepapp;
  *
  * @author ryanwhite
  */
-public class SleepInput extends SleepApp {
+public class SleepInput {
 
-    private double bedTime;
-    private double wakeUpTime;
+    private int hours;
 
-
-    public SleepInput(double bedTime, double wakeUpTime) {
-        this.bedTime = bedTime;
-        this.wakeUpTime = wakeUpTime;
+    public SleepInput(int hours) {
+        this.hours = hours;
     }
 
-    public double getBedTime() {
-        return bedTime;
-    }
-
-    public double getWakeUpTime() {
-        return wakeUpTime;
-    }
-    
-    public double getHours(){
-        if(wakeUpTime < bedTime){
-            return(24 - bedTime)+wakeUpTime;
-        }else{
-            return wakeUpTime - bedTime;
-        }
+    public int getHours() {
+        return hours;
     }
 
 }

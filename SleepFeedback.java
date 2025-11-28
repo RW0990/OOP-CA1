@@ -17,7 +17,7 @@ public class SleepFeedback {
 
         if (avg > 7) {
             feedback = "Your average sleep duration is good";
-        }else if(avg > 9){
+        } else if (avg > 9) {
             feedback = "Your average sleep is unhealthy sleeping over 9 hours a night can lead to health problems";
         } else {
             feedback = "Your average sleep is poor, try going to bed at a reasonable time";
