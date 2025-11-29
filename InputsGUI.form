@@ -102,9 +102,9 @@
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="caloriesInput" alignment="0" min="-2" pref="34" max="-2" attributes="0"/>
-                  <Component id="caloriesInputText" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="caloriesInputText" min="-2" pref="34" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">

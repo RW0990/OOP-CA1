@@ -1,6 +1,5 @@
-package com.mycompany;
+package com.mycompany.oopca1cp2upload;
 
-// file: com/example/sleeptracker/MoodTracker.java
 public class MoodTracker {
 
     private double moodRating; //mood rating 1-10 (10 being best)

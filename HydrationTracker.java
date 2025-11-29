@@ -1,10 +1,10 @@
-package com.mycompany;
+package com.mycompany.oopca1cp2upload;
 
 import java.util.Scanner;
 public class HydrationTracker {
     private int dailyWaterIntake; 
     private static final int recommendedAmount = 3000; /*3L recommended amount*/
-
+    
     public HydrationTracker() {}
 
     public void setDailyWaterIntake(int dailyWaterIntake) {
@@ -28,7 +28,7 @@ public class HydrationTracker {
 
     /* compare water intake to recommended amount and notify user if they reached goal or need to drink more */
     public void compareWater(){
-        System.out.println("-----Hydration Status-----");
+        
         if (dailyWaterIntake>= recommendedAmount) {
             System.out.println("Congratulations, you met your hydration goal");
         } else {
