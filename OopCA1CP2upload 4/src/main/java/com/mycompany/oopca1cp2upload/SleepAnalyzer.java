@@ -1,0 +1,41 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.oopca1cp2upload;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author ryanwhite
+ */
+public class SleepAnalyzer {
+
+    private double averageSleep;
+
+    public SleepAnalyzer() {
+
+    }
+    
+    //calculating average sleep for the 7 days of the week
+    public void calcAvSleep(ArrayList<SleepInput> weeklySleep) {
+        double total = 0;
+
+        for (SleepInput s : weeklySleep) {
+           total += s.getHours();
+        }
+        if(!weeklySleep.isEmpty()){
+            averageSleep = total/weeklySleep.size();
+        }else{
+            averageSleep=0;
+        }
+    }
+       
+    
+
+    public double getAverageSleep() {
+        return averageSleep;
+    }
+
+}
