@@ -1,0 +1,16 @@
+Username:
+Pol
+Age:
+2
+Weight:
+222.0
+Meal:
+potato
+Calories:
+
+Mood:
+1
+Water remaining(ml):
+2
+Average hours slept:
+7.0
